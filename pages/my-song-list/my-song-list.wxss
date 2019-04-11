@@ -1,0 +1,4 @@
+/* pages/my-song-list/my-song-list.wxss */
+.no-more{
+  text-align: center;
+}

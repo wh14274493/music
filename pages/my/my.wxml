@@ -1,0 +1,53 @@
+<view>
+  <view class="header">
+    <image src="./bg.png" class="bg-image" />
+    <view class="userinfo userinfo-wrapper">
+      <view class="userinfo-avatar">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <view class="userinfo-nickname">
+        <open-data type="userNickName" lang="zh_CN"></open-data>
+      </view>
+
+    </view>
+  </view>
+  <scroll-view scroll-y class="content">
+    <view class="tab">
+      <view class="like item" bindtap='toLike'>
+        <view class="icon">
+          <i class="icon-not-favorite"></i>
+        </view>
+        <view class="text">我的收藏</view>
+        <view class="more">
+          <image src="./more.png" />
+        </view>
+      </view>
+      <view class="rencent item" bindtap='toRencent'>
+        <view class="icon">
+          <image src="./recent.png" />
+        </view>
+        <view class="text">最近播放</view>
+        <view class="more">
+          <image src="./more.png" />
+        </view>
+      </view>
+      <!-- <view class="setting-wifi item" bindtap="showActionSheets"
+            data-type="{{actionSheetsWifi}}" data-types="wifi">
+        <view class="icon">
+          <image src="./wifi.png"/>
+        </view>
+        <view class="text">仅WiFi联网</view>
+        <view class="more">
+          <image src="./more.png"/>
+        </view>
+      </view>
+      -->
+
+    </view>
+    <block wx:if="{{userInfo==null}}">
+    <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
+      授权登录
+    </button>
+    </block>
+  </scroll-view>
+</view>

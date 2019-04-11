@@ -1,0 +1,3 @@
+<import src="commentslist.wxml" />
+<template is="commentslist" data="{{rec:rec,loading:loading}}" />
+  <input bindconfirm="send" confirm-type="send" class="send address-add" placeholder="输入评论" placeholder-style="color: #ffcd32;" placeholder-class="placeholder" />

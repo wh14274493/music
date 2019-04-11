@@ -1,0 +1,8 @@
+<view>
+  <block wx:if="{{topList.length>0}}">
+  <music-list title="{{title}}" image="{{topList[0].image}}" songs="{{topList}}"></music-list>
+  </block>
+  <block wx:if="{{topList.length<1}}">
+  <view class="no-more">暂无</view>
+  </block>
+</view>
